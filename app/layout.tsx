@@ -1,25 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Job Importer",
-  description: "Scalable job import system",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
-    </html>
-  );
-}
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+});
